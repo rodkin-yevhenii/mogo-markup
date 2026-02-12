@@ -414,7 +414,7 @@ nav {
 .devices {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
     position: relative;
 }
 
@@ -427,4 +427,85 @@ nav {
     bottom: -80px;
     right: 0;
     z-index: 1;
+}
+
+/* We do */
+.wedo {
+    display: flex;
+}
+
+.wedo__item {
+    width: 50%;
+}
+
+/* Accordion */
+.accordion__item {
+    border: 1px solid #e5e5e5;
+
+    margin-bottom: 10px;
+}
+
+.accordion__item.active .accordion__content {
+    display: block;
+}
+
+.accordion__item.active .accordion__header {
+    border-bottom-color: #e5e5e5;
+}
+
+.accordion__item.active .accordion__header:after {
+    transform: translateY(-75%)
+    rotate(135deg);
+}
+
+.accordion__header {
+    padding: 15px 20px 15px 65px;
+    position: relative;
+
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+}
+
+.accordion__header:after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    border-top: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+
+    transform: translateY(-25%)
+    rotate(-45deg);
+}
+
+.accordion__icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 1;
+
+    transform: translateY(-50%);
+}
+
+.accordion__title {
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.accordion__content {
+    display: none;
+
+    padding: 15px 20px;
+
+    font-size: 15px;
+    font-style: italic;
+    color: #999;
+    font-weight: 300;
 }
