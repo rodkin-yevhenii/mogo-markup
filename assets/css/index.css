@@ -644,3 +644,9 @@ nav {
     background-color: #f38181;
     color: #fff;
 }
+
+/* Logos */
+.logos {
+    display: flex;
+    justify-content: space-between;
+}
